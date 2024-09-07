@@ -18,6 +18,14 @@ function Nav() {
     const { data: dataWorld } = useGetCatNewsQuery('66d299353b78a8895ecc9dad');
     const [show , setShow] = useState(false)
 
+    const handleScrollTo = () => {
+        const appHeight = document.querySelector('header')?.offsetHeight || 0; 
+        window.scrollTo({
+            top: appHeight,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div className='container  flex justify-center mx-auto absolute z-20 left-0 right-0'>
             <nav className='w-full flex justify-between items-center text-white font-mono pt-4 px-3'>
@@ -26,7 +34,7 @@ function Nav() {
                 </Link>
                 <ul className='hidden md:flex justify-between text-sm lg:text-base  w-[70%] lg:w-[60%] xl:w-[50%] filters'>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'allnews'}>All News</Link>
+                        <Link to={'allnews'} onClick={handleScrollTo}>All News</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[80%]  left-0 right-0 p-5 mx-5 h-0 z-50 fixed hidden group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex gap-4'>
@@ -41,7 +49,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66bf4ab671bd9eb73a88251e'}>Cəmiyyət</Link>
+                        <Link onClick={handleScrollTo} to={'category/66bf4ab671bd9eb73a88251e'}>Cəmiyyət</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[45%] left-0 right-0 p-5 mx-auto h-0 z-50 fixed hidden group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex gap-5'>
@@ -56,7 +64,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66bf4abf71bd9eb73a882522'}>Siyasət</Link>
+                        <Link onClick={handleScrollTo} to={'category/66bf4abf71bd9eb73a882522'}>Siyasət</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[45%] left-0 mx-auto right-0 p-5 h-0 z-50 fixed hidden  group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex justify-between'>
@@ -71,7 +79,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66bf4ac971bd9eb73a882527'}>İdman</Link>
+                        <Link onClick={handleScrollTo} to={'category/66bf4ac971bd9eb73a882527'}>İdman</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[35%] left-0 mx-auto right-0 p-5 h-0 z-50 fixed hidden  group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex justify-between'>
@@ -86,7 +94,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66bf4adb71bd9eb73a88252b'}>Gündəm</Link>
+                        <Link onClick={handleScrollTo} to={'category/66bf4adb71bd9eb73a88252b'}>Gündəm</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[20%] left-0 mx-auto right-0 p-5 h-0 z-50 fixed hidden group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex justify-between'>
@@ -101,7 +109,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66bf4b3b190bde5774a51d9a'}>İqtisadiyyat</Link>
+                        <Link onClick={handleScrollTo} to={'category/66bf4b3b190bde5774a51d9a'}>İqtisadiyyat</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[35%] left-0 mx-auto right-0 p-5 h-0 z-50 fixed hidden group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex justify-between'>
@@ -116,7 +124,7 @@ function Nav() {
                         </div>
                     </li>
                     <li className='cursor-pointer relative group'>
-                        <Link to={'category/66d299353b78a8895ecc9dad'}>Dunya</Link>
+                        <Link onClick={handleScrollTo} to={'category/66d299353b78a8895ecc9dad'}>Dunya</Link>
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         <div className='w-[35%]  right-[250px] p-5 h-0 z-50 fixed hidden group-hover:flex justify-center bg-black overflow-hidden group-hover:h-auto group-hover:overflow-visible transition-all duration-300 opacity-0 group-hover:opacity-100'>
                             <div className='flex justify-between'>
