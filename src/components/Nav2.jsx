@@ -7,8 +7,13 @@ import { useGetAllCategoriesQuery } from "../store/api";
 
 function Nav2({setShow , show}) {
   const {data} = useGetAllCategoriesQuery()
-    console.log(data);
-    
+  const handleScrollTo = () => {
+    const appHeight = document.querySelector('header')?.offsetHeight || 0;
+    window.scrollTo({
+      top: appHeight,
+      behavior: 'smooth',
+    });
+  };    
   return (
     <div className={`fixed bg-black block md:hidden text-white h-screen p-8 right-0 z-30 transition-all duration-300 ${show ? 'translate-x-0' : 'translate-x-[100%]'}`}>
       <div className="relative">
@@ -16,7 +21,7 @@ function Nav2({setShow , show}) {
         <ul className='flex flex-col gap-2 p-3 '>
             <li className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={'allNews'}>All News</Link></li>
             {data?.map((item , i) => {
-              return <li key={i} className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={`category/${item._id}`}>{item.name}</Link></li>     
+              return <li onClick={handleScrollTo} key={i} className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={`category/${item._id}`}>{item.name}</Link></li>     
 
             })}
         </ul>
