@@ -24,7 +24,7 @@ function DetailNews() {
                         <span className='text-white font-bold opacity-80'>August 18, 2024</span>
                     </div>
                     <p className='text-white line-clamp-3 lg:line-clamp-4 xl:line-clamp-6 opacity-50 font-semibold text-sm w-full'>{item?.description}...</p>
-                    <Link to={'/'} className='text-xl cursor-pointer font-semibold hover:bg-colorCustom2 text-center rounded-md transition-all duration-500 border-[1px] border-colorCustom2 w-[8%]'>Back</Link>
+                    <Link to={'/'} className='text-xl cursor-pointer font-semibold hover:bg-colorCustom2 text-center rounded-md transition-all duration-500 border-[1px] border-colorCustom2 w-[60px]'>Back</Link>
                 </div>
             </div>
         </div>
