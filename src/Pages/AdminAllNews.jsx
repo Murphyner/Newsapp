@@ -26,7 +26,7 @@ function AdminAllNews() {
     }
 
     return (
-        <div className="flex flex-col items-center w-full p-4">
+        <div className="flex flex-col  w-full p-4">
             <Toast />
             <ul className="flex flex-col gap-2 w-full sm:w-[80%] md:w-[70%] lg:w-[62%] p-2">
                 {isLoading ? (
