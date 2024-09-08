@@ -36,7 +36,7 @@ function DashboardNav() {
             {/* Log Out Button */}
             <button
               onClick={logOut}
-              className='bg-colorCustom bg-opacity-80 min-w-[70px] md:w-[90px] text-sm md:text-lg p-1 md:p-2 rounded-md text-white transition-all duration-300 hover:bg-opacity-100'
+              className='bg-colorCustom bg-opacity-80 min-w-[70px] md:w-[120px] text-sm md:text-lg p-1 md:p-2 rounded-md text-white transition-all duration-300 hover:bg-opacity-100'
             >
               Log Out
             </button>
