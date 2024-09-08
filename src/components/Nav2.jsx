@@ -19,7 +19,7 @@ function Nav2({setShow , show}) {
       <div className="relative">
         <IoMdClose className="absolute -right-4 text-2xl -top-4" onClick={() => setShow(false)} />
         <ul className='flex flex-col gap-2 p-3 '>
-            <li className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={'allNews'}>All News</Link></li>
+            <li onClick={handleScrollTo} className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={'allNews'}>All News</Link></li>
             {data?.map((item , i) => {
               return <li onClick={handleScrollTo} key={i} className='opacity-50 hover:text-colorCustom2 hover:opacity-100 transition-all duration-300'><Link to={`category/${item._id}`}>{item.name}</Link></li>     
 
