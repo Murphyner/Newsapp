@@ -15,7 +15,7 @@ function FooterNews() {
                 <div className='py-3 w-[80%] sm:w-[30%]'>
                     <h2 className='text-xl text-white font-mono opacity-75'>Popular articles</h2>
                     {data?.slice(10, 15).map((item, i) =>
-                        <Link to={item._id} className='text-white py-1' key={i}>
+                        <Link to={`news/${item._id}`} className='text-white py-1' key={i}>
                             <p className='cursor-pointer hover:text-colorCustom2 pb-1 opacity-70 text-[13px] hover:opacity-100 transition-all duration-300'>{item.title} ...</p>
                             <span className='text-[13px] tracking-tighter opacity-70'>June 31 ,2024</span>
                         </Link>
@@ -24,7 +24,7 @@ function FooterNews() {
                 <div className='py-3 w-[80%] sm:w-[30%]'>
                     <h2 className='text-xl text-white font-mono opacity-75'>Featured</h2>
                     {data?.slice(5, 10).map((item, i) =>
-                        <Link to={item._id} className='text-white py-1' key={i}>
+                        <Link to={`news/${item._id}`} className='text-white py-1' key={i}>
                             <p className='cursor-pointer hover:text-colorCustom2 pb-1 opacity-70 text-[13px] hover:opacity-100 transition-all duration-300'>{item.title} ...</p>
                             <span className='text-[13px] tracking-tighter opacity-70'>June 31 ,2024</span>
                         </Link>
